@@ -9,8 +9,6 @@
 
 extern VALUE numo_cDFloat;
 
-VALUE cFromfile;
-
 VALUE numo_fromfile(VALUE self, VALUE filename){
     char* cfilename = StringValuePtr(filename);
     long filesize = NUM2LONG(rb_funcall(rb_cFile, rb_intern("size"), 1, filename));
@@ -20,6 +18,5 @@ VALUE numo_fromfile(VALUE self, VALUE filename){
 }
 
 void Init_fromfile(void){
-    cFromfile = rb_define_module("Fromfile");
-    rb_define_singleton_method(cFromfile, "fromfile", numo_fromfile, 1);
+    rb_define_singleton_method(numo_cDFloat, "fromfile", numo_fromfile, 1);
 }
