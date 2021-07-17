@@ -17,16 +17,6 @@ VALUE numo_fromfile(VALUE self, VALUE filename){
     return a;
 }
 
-VALUE numo_tofile(VALUE self, VALUE filename){
-    char* cfilename = StringValuePtr(filename);
-    DFloat data;
-    data.data = (double*)na_get_pointer_for_read(self);
-    data.size = NUM2LONG(rb_funcall(self, rb_intern("size"), 0));
-    dFloat2file(cfilename, data);
-    return self;
-}
-
 void Init_fromfile(void){
     rb_define_singleton_method(numo_cDFloat, "fromfile", numo_fromfile, 1);
-    rb_define_method(numo_cDFloat, "tofile", numo_tofile, 1);
 }
