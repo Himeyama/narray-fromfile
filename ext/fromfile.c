@@ -15,7 +15,7 @@ VALUE numo_fromfile(VALUE self, VALUE filename){
     char* cfilename = StringValuePtr(filename);
     long filesize = NUM2LONG(rb_funcall(rb_cFile, rb_intern("size"), 1, filename));
     VALUE a = rb_funcall(numo_cDFloat, rb_intern("zeros"), 1, LONG2NUM(filesize / sizeof(double)));
-    dFloatfromfilep(cfilename, (double*)na_get_pointer_for_read(a));
+    dFloatFromFileP(cfilename, (double*)na_get_pointer_for_read(a));
     return a;
 }
 
