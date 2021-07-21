@@ -3,7 +3,7 @@
  *  Licensed under the MIT License.
  */
 
-#include <fromfile.h>
+#include "fromfile.h"
 #include <ruby.h>
 #include <numo/narray.h>
 
@@ -25,6 +25,8 @@ VALUE numo_tofile(VALUE self, VALUE filename){
     dFloat2file(cfilename, data);
     return self;
 }
+
+
 
 void Init_fromfile(void){
     rb_define_singleton_method(numo_cDFloat, "fromfile", numo_fromfile, 1);
