@@ -17,3 +17,28 @@ gem specific_install -l "git://github.com/himeyama/narray-fromfile.git"
 ```rb
 gem "narray-fromfile", github: "himeyama/narray-fromfile.git", branch: :main
 ```
+
+## サンプル
+
+### 書き込み
+```rb
+require "numo/narray"
+require "fromfile"
+
+a = Numo::DFloat[1..256].reshape(16, 16)
+a.tofile("data.bin")
+```
+
+### 読み込み
+```rb
+require "numo/narray"
+require "fromfile"
+
+a = Numo::DFloat.fromfile("data.bin").reshape(16, 16)
+# 行と列のサイズは保存されないので、読み込み後 reshape する。
+```
+
+### 確認
+```sh
+od -t fD data.bin
+```
