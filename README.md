@@ -1,35 +1,19 @@
-# Narray::Fromfile
+# narray-fromfile
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/narray/fromfile`. To experiment with that code, run `bin/console` for an interactive prompt.
+## 概要
+倍精度浮動小数点のバイナリファイルを NArray 行列として読み(書き)します。
 
-TODO: Delete this and the text above, and describe your gem
+## インストール
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'narray-fromfile'
+GitHub から、`narray-fromfile` をインストールするには以下のコマンドを実行します。
+```sh
+gem install specific_install
+gem specific_install -l "git://github.com/himeyama/narray-fromfile.git"
 ```
 
-And then execute:
 
-    $ bundle install
+**Gemfile** に記述する場合は以下のようにして `bundle`。
 
-Or install it yourself as:
-
-    $ gem install narray-fromfile
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake ` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/narray-fromfile.
+```rb
+gem "narray-fromfile", github: "himeyama/narray-fromfile.git", branch: :main
+```
