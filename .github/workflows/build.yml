@@ -13,14 +13,15 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version : 2.7
-      - name: Install dependencies
-        run: bundle install
-      - name: Compile C
-        run: bundle exec rake compile:fromfile
-      - name: build gem
-        run: gem build narray-fromfile.gemspec
-      - name: install gem
-        run: gem install narray-fromfile-*.gem
-      - name: Test
-        run: bundle exec rake test
+      - name: Install a specific_install gem
+        run: gem install specific_install --no-document
+      - name: Install fromfile gems.
+        run: gem specific_install -l "git://github.com/himeyama/narray-fromfile.git"
+      - name: test1
+        run: ./test.rb
+      - name: test2
+        run: od -t fD data.bin
+      - name: uninstall gems
+        run: gem uninstall narray-fromfile numo-narray
+        
       
