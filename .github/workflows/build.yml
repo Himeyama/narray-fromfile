@@ -15,7 +15,7 @@ jobs:
           ruby-version : 2.7
       - name: Build
         run: | 
-          gem install --no-document bundler
+          gem install --no-document bundler rake-compiler
           gem build narray-fromfile.gemspec
           gem install narray-fromfile-*.gem
           bundle install
