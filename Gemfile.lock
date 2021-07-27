@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    narray-fromfile (0.1.0)
+    narray-fromfile (0.1.2)
       numo-narray
 
 GEM
@@ -9,14 +9,18 @@ GEM
   specs:
     numo-narray (0.9.1.9)
     rake (13.0.6)
+    rake-compiler (1.1.1)
+      rake
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
+  bundler
   narray-fromfile!
   numo-narray (~> 0.9.1.3)
   rake (~> 13.0)
+  rake-compiler
 
 BUNDLED WITH
-   2.2.22
+   2.1.4
