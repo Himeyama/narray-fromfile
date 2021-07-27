@@ -8,6 +8,6 @@ gemspec
 gem "rake", "~> 13.0"
 
 # gem "", "~> "
-gem 'numo-narray', '~> 0.9.1.3'
+gem 'numo-narray'
 gem "bundler"
 gem "rake-compiler"
