@@ -3,7 +3,15 @@
 ## 概要
 倍精度浮動小数点のバイナリファイルを NArray 行列として読み(書き)します。
 
+**単精度浮動小数点** は対応していません。
+
 ## インストール
+
+```sh
+gem install narray-fromfile
+```
+
+---
 
 GitHub から、`narray-fromfile` をインストールするには以下のコマンドを実行します。
 ```sh
@@ -12,7 +20,15 @@ gem specific_install -l "git://github.com/himeyama/narray-fromfile.git"
 ```
 
 
-**Gemfile** に記述する場合は以下のようにして `bundle`。
+### Gemfile に記述する場合は以下のように
+
+```sh
+gem "narray-fromfile"
+```
+
+---
+
+GitHub からインストールしたい場合は、
 
 ```rb
 gem "narray-fromfile", github: "himeyama/narray-fromfile.git", branch: :main
