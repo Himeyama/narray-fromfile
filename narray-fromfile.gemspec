@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Murata Mitsuharu"]
   spec.email         = ["hikari.photon+mygit@gmail.com"]
 
-  spec.summary       = "Write a short summary, because RubyGems requires one."
-  spec.description   = "Write a longer description or delete this line."
+  spec.summary       = "Extracts data from a double precision floating point binary file."
+  spec.description   = "Extracts data from a double precision floating point binary file. 倍精度浮動小数点バイナリファイルからデータを抽出するよ。"
   spec.homepage      = "https://github.com/himeyama/narray-fromfile"
   spec.required_ruby_version = ">= 2.4.0"
 
