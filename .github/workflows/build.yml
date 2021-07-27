@@ -1,0 +1,24 @@
+name: build
+
+on: 
+  push:
+
+jobs:
+  release-versions:
+    name: Build narray-fromfile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version : 2.7
+      - name: Build
+        run: | 
+          gem install --no-document bundler
+          gem build narray-fromfile.gemspec
+          gem install narray-fromfile-*.gem
+          bundle install
+      - name: Test
+        run: rake test
+      
