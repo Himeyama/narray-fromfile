@@ -22,5 +22,5 @@ jobs:
       - name: install gem
         run: gem install narray-fromfile-*.gem
       - name: Test
-        run: rake test
+        run: bundle exec rake test
       
