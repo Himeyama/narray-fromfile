@@ -1,5 +1,7 @@
 # narray-fromfile
 
+[![build](https://github.com/Himeyama/narray-fromfile/actions/workflows/build.yml/badge.svg)](https://github.com/Himeyama/narray-fromfile/actions/workflows/build.yml)
+
 ## 概要
 倍精度浮動小数点のバイナリファイルを NArray 行列として読み(書き)します。
 
