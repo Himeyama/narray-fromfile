@@ -2,6 +2,10 @@
 
 [![build](https://github.com/Himeyama/narray-fromfile/actions/workflows/build.yml/badge.svg)](https://github.com/Himeyama/narray-fromfile/actions/workflows/build.yml) [![Gem Version](https://badge.fury.io/rb/narray-fromfile.svg)](https://badge.fury.io/rb/narray-fromfile)
 
+改良版: ![numo-binrw](https://github.com/Himeyama/numo-binrw)
+
+いろいろ改良したので、こっち ↑ がおすすめです。書き方は似ていますがメソッド名が異なり互換はありません。
+
 ## 概要
 倍精度浮動小数点のバイナリファイルを NArray 行列として読み(書き)します。
 
